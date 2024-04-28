@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Youtube Website</title>
+        <style>
+            body{
+                border: 1px solid black;
+                padding: 10px;     
+            }
+            #subscribeForm 
+            {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="https://www.youtube.com/" target="_blank" style="text-align: center;">
+            <img src="https://www.youtube.com/img/desktop/yt_1200.png" style="width: 85px;" alt="YouTube Logo">
+        </a>
+        <br><br>
+        <iframe id="videoplay" width="560" height="315" src="https://youtu.be/G3e-cpL7ofc?feature=shared" frameborder="0" allowfullscreen>
+        </iframe>
+        <br><button id="playButton" onclick="playVideo()" >Play</button>
+        <h2>Subscribe form</h2>
+        <form>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br><br><button type="submit">Subscribe</button>
+        </form>
+        <script>
+        function displayForm() {
+            var form = document.getElementById('subscribeForm');
+            form.style.display = 'hidden'; // Show the subscription form
+        }
+    </script>
+    <div id="personal details">
+        <h3>Personal details</h3>
+    Salutation <select name="val" id="val">
+        <option selected>---None---</option>
+        <option>Mr.</option>
+        <option>Mrs.</option>
+        <option>Ms.</option>
+    </select>
+    <br>
+    <br>
+        First Name 
+        <input type="text" name="First name" id="First Name"><br><br>
+        Last Name 
+        <input type="text" name="Last Name" id="Last Name"> <br><br>
+        Gender <br> <br>
+        <input type="radio" name ="Radio" value="Radio" id="Radio"><b>Male</b>
+        <input type="radio" name="Radio1" value="Radio1" id="Radio"> <b>Female </b><br><br>
+        E-mail 
+        <input type="text" name="email" id="email"><br><br>
+        Date Of Birth
+        <input type="date" name="dob" id="dob"><br><br>
+        Address 
+        <br>
+        <textarea name="textarea" rows="5" cols="35" id="textarea"> 
+        </textarea>
+        <br><br>
+        <button>Submit</button>
+        <br>
+        <br>
+    </div>
+    </body>
+</html>
