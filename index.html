@@ -1,67 +1,68 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Youtube Website</title>
-        <style>
-            body{
-                border: 1px solid black;
-                padding: 10px;     
-            }
-            #subscribeForm 
-            {
-                display: none;
-            }
-        </style>
-    </head>
-    <body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Clone Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #ff0000; /* Red color similar to YouTube's header */
+            padding: 10px;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+        }
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%;
+            margin-bottom: 20px;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .subscribe-button {
+            background-color: #ff0000;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .subscribe-button:hover {
+            background-color: #cc0000;
+        }
+    </style>
+</head>
+<body>
+    
         <a href="https://www.youtube.com/" target="_blank" style="text-align: center;">
             <img src="https://www.youtube.com/img/desktop/yt_1200.png" style="width: 85px;" alt="YouTube Logo">
         </a>
         <br><br>
+        <!-- <button id="playButton" onclick="playVideo()" >Play</button> -->
         <iframe id="videoplay" width="560" height="315" src="https://www.youtube.com/embed/FYErehuSuuw" frameborder="0" allowfullscreen>
         </iframe>
         <br><button id="playButton" onclick="playVideo()" >Play</button>
-        <h2>Subscribe form</h2>
-        <form>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <br><br><button type="submit">Subscribe</button>
-        </form>
-        <script>
-        function displayForm() {
-            var form = document.getElementById('subscribeForm');
-            form.style.display = 'hidden'; // Show the subscription form
+        <button class="subscribe-button" onclick="openForm()">Subscribe</button>
+    </main>
+    <script>
+        function openForm() {
+            window.open("youtube.html", "_blank");
         }
     </script>
-    <div id="personal details">
-        <h3>Personal details</h3>
-    Salutation <select name="val" id="val">
-        <option selected>---None---</option>
-        <option>Mr.</option>
-        <option>Mrs.</option>
-        <option>Ms.</option>
-    </select>
-    <br>
-    <br>
-        First Name 
-        <input type="text" name="First name" id="First Name"><br><br>
-        Last Name 
-        <input type="text" name="Last Name" id="Last Name"> <br><br>
-        Gender <br> <br>
-        <input type="radio" name ="Radio" value="Radio" id="Radio"><b>Male</b>
-        <input type="radio" name="Radio1" value="Radio1" id="Radio"> <b>Female </b><br><br>
-        E-mail 
-        <input type="text" name="email" id="email"><br><br>
-        Date Of Birth
-        <input type="date" name="dob" id="dob"><br><br>
-        Address 
-        <br>
-        <textarea name="textarea" rows="5" cols="35" id="textarea"> 
-        </textarea>
-        <br><br>
-        <button>Submit</button>
-        <br>
-        <br>
-    </div>
-    </body>
+</body>
 </html>
